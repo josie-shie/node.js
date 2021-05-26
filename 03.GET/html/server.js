@@ -10,7 +10,7 @@ const http = require("http");
 const fs = require("fs");
 
 const sendResponse = (filename, statusCode, response) => {
-  fs.readFile(`/html/${filename}`, (error, data) => {
+  fs.readFile(`${filename}`, (error, data) => {
     if (error) {
       response.statusCode = 500;
       //設定回傳資料.end()裡的資料型態
